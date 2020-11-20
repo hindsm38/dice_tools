@@ -10,7 +10,7 @@ setuptools.setup(
     author_email="hinds.matt38@gmail.com",
     description="Tools for use with Lea in order to simulate dice rolls in tabletop games.",
     long_description=long_description,
-    long_description_content_type="test/markdown",
+    long_description_content_type="text/markdown",
     url="https://github.com/hindsm38/dice_tools",
     packages=setuptools.find_packages(),
     classifiers=[
