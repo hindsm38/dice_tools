@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="dice_tools",
-    version="0.0.1",
+    version="1.0.0",
     author="Matthew Hinds",
     author_email="hinds.matt38@gmail.com",
     description="Tools for use with Lea in order to simulate dice rolls in tabletop games.",
