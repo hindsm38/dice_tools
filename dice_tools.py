@@ -15,7 +15,7 @@ def re_rolling(die=leaf.die(), on=1):
     return first_roll.map(re_roll_func, second_roll, on)
 
 
-def variable_shots(shots, success_probability):
+def variable_tests(shots, success_probability):
     if not isinstance(shots, lea.Lea):
         shots = lea.vals(shots)
     distribution = dict()
@@ -43,7 +43,7 @@ def merge_pmf_dicts(a, b):
     return b
 
 
-def variable_damage_table(max_wounds, damage_die, wounds_per_model):
+def variable_damage_table(max_wounds, damage_die, wounds_per_model, flatten=True):
     result_dict = dict()
     if not isinstance(damage_die, lea.Lea):
         damage_die = lea.vals(damage_die)
@@ -63,6 +63,8 @@ def variable_damage_table(max_wounds, damage_die, wounds_per_model):
                 result_dict[(i, j)] = lea.pmf(temp_dict)
             else:
                 result_dict[(i, j)] = lea.vals(i)
+    if flatten:
+        return flatten_damage_dictionary(result_dict)
     return result_dict
 
 
