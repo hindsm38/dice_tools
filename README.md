@@ -12,7 +12,9 @@ Tools also install matplotlib for full functionality. Users will find this packa
 with the functionality of Lea3. 
 
 ## Installation 
-TODO
+```python
+pip install dice_tools
+```
 
 ## Example Use
 
